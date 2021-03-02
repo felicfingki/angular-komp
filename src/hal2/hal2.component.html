@@ -9,12 +9,29 @@ table, th, td {
     <th>Judul</th>
     <th>Isi</th>
     <th>Tanggal</th>
+    <th>Action</th>
   </tr>
-<div *ngFor="let arrjudul of judul, let arrisi of isi, let arrtanggal of tanggal">
-    <td>{{arrjudul}}</td>
-    <td>{{arrisi}}</td>
-    <td>{{arrtanggal}}</td>
+  <tr>
+    <td>
+<div *ngFor="let arrjudul of judul">
+   {{arrjudul}}
 </div>
-
+</td>
+<td>
+<div *ngFor="let arrisi of isi">
+   {{arrisi}}
+</div>
+</td>
+<td>
+<div *ngFor="let arrtanggal of tanggal">
+   {{arrtanggal}}
+</div>
+</td>
+<td>
+<div *ngFor="let arrjudul of tanggal;let arrisi of isi; let arrtanggal of tanggal">
+   <button (click)="Fav(arrjudul,arrisi,arrtanggal)">Favourite It!</button>
+</div>
+</td>
+</tr>
 
 </table>

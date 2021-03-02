@@ -18,5 +18,9 @@ export class Hal2Component implements OnInit {
     this.isi = this.globalvar.getisi();
     this.tanggal = this.globalvar.gettanggal();
   }
+  Fav(j : string, i : string, t : string)
+  {
+    this.globalvar.setall(j,i,t);
+  }
 
 }

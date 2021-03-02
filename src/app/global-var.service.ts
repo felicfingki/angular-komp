@@ -8,6 +8,9 @@ export class GlobalVarService {
   datajudul = [];
   dataisi = [];
   datatanggal = [];
+  favjudul : string;
+  favisi : string;
+  favtanggal : string;
   counter : number =0;
   public isijudul(judul2 : string)
   {
@@ -33,5 +36,23 @@ export class GlobalVarService {
   public gettanggal()
   {
     return(this.datatanggal);
+  }
+  public setall(j:string,i:string,t:string)
+  {
+    this.favjudul = j;
+    this.favisi =i;
+    this.favtanggal = t;
+  }
+  public getfavjudul()
+  {
+    return(this.favjudul);
+  }
+  public getfavisi()
+  {
+    return(this.favisi);
+  }
+  public getfavtanggal()
+  {
+    return(this.favtanggal);
   }
 }
