@@ -1,0 +1,20 @@
+<br>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<table style="width:100%">
+  <tr>
+    <th>Judul</th>
+    <th>Isi</th>
+    <th>Tanggal</th>
+  </tr>
+<div *ngFor="let arrjudul of judul, let arrisi of isi, let arrtanggal of tanggal">
+    <td>{{arrjudul}}</td>
+    <td>{{arrisi}}</td>
+    <td>{{arrtanggal}}</td>
+</div>
+
+
+</table>
